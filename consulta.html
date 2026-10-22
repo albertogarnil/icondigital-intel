@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Agenda una consulta · Intel Digital</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="productos">
+<div id="site-header"></div>
+
+<main data-no-footcta>
+  <section class="hero phero">
+    <canvas class="wave" data-density="low" data-horizon=".45" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Ruta"><a href="./">Inicio</a><span>/</span><a href="productos.html">Productos y tarifas</a><span>/</span><span>Consulta</span></nav>
+      <h1 class="split"><span class="w"><span>Agenda</span></span> <span class="w"><span class="grad" style="animation-delay:.15s">una consulta</span></span></h1>
+      <p class="lead">Cuéntanos qué necesita tu negocio y un asesor especializado te preparará una propuesta sin compromiso.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap split-2" style="align-items:start;grid-template-columns:.8fr 1.2fr">
+      <div class="info-stack stagger">
+        <div class="tcard">
+          <div class="tc-head"><span>CH·01 / Teléfono</span><span class="bars" aria-hidden="true"><b></b><b></b><b></b><b></b></span></div>
+          <div class="tc-body"><span class="big">+34 916 867 514</span><p>Llámanos y te atiende un asesor especializado en empresas.</p></div>
+        </div>
+        <div class="tcard">
+          <div class="tc-head"><span>CH·02 / Email</span><span class="bars" aria-hidden="true"><b></b><b></b><b></b><b></b></span></div>
+          <div class="tc-body"><span class="big">info@empresa.com</span><p>Escríbenos y te respondemos lo antes posible.</p></div>
+        </div>
+        <div class="tcard">
+          <div class="tc-head"><span>CH·03 / Respaldo</span><span class="bars" aria-hidden="true"><b></b><b></b><b></b><b></b></span></div>
+          <div class="tc-body" style="grid-template-columns:auto 1fr;align-items:center;gap:16px"><img src="img/orange.png" alt="Logo de Orange" width="52" height="52" style="border-radius:4px"><p style="color:#e4e4ea">Distribuidor Oficial Orange con alcance nacional.</p></div>
+        </div>
+      </div>
+
+      <form class="form-card rv" data-form="Prototipo: en la web real aquí se enviaría la solicitud." novalidate>
+        <div class="seg" role="radiogroup" aria-label="Tipo de cliente" data-hash id="tipoSeg">
+          <input type="radio" name="tipo" id="c-pyme" value="pyme" checked><label for="c-pyme">Pyme</label>
+          <input type="radio" name="tipo" id="c-auto" value="autonomo"><label for="c-auto">Autónomo</label>
+          <input type="radio" name="tipo" id="c-gran" value="gran"><label for="c-gran">Gran empresa</label>
+          <input type="radio" name="tipo" id="c-dig" value="digitaliza"><label for="c-dig">Digitaliza</label>
+          <span class="pill" aria-hidden="true"></span>
+        </div>
+        <h2 class="form-title" id="formTitle">Pymes</h2>
+        <p class="note">¿Tienes alguna duda o quieres conocer mejor nuestros productos y servicios? Déjanos tus datos y nuestro equipo se pondrá en contacto contigo.</p>
+        <div class="fields">
+          <label class="f"><input id="q-name" placeholder=" " required autocomplete="name"><span>Nombre y apellidos*</span></label>
+          <label class="f"><input id="q-cargo" placeholder=" " autocomplete="organization-title"><span>Cargo</span></label>
+          <label class="f"><input id="q-email" type="email" placeholder=" " required autocomplete="email"><span>Email*</span></label>
+          <label class="f"><input id="q-emp" placeholder=" " autocomplete="organization"><span id="empLabel">Empresa</span></label>
+          <label class="f"><input id="q-tel" type="tel" placeholder=" " autocomplete="tel"><span>Teléfono</span></label>
+          <label class="f"><input id="q-city" placeholder=" " autocomplete="address-level2"><span>Ciudad</span></label>
+          <label class="f"><select id="q-lines"><option>Hasta 5 líneas móviles</option><option>De 6 a 20 líneas</option><option>De 21 a 100 líneas</option><option>Más de 100 líneas</option></select><span>¿Cuántas líneas tienes?</span><svg class="chev" viewBox="0 0 12 12"><path d="m2 4 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></label>
+          <label class="f"><select id="q-serv"><option>Conectividad y Movilidad</option><option>Puesto de Trabajo</option><option>Comunicaciones</option><option>Soluciones Digitales</option><option>Ciberseguridad</option></select><span>Servicio de interés</span><svg class="chev" viewBox="0 0 12 12"><path d="m2 4 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></label>
+        </div>
+        <div>
+          <p class="f-label">¿En qué podemos ayudarte?</p>
+          <div class="checks">
+            <label><input type="checkbox" id="k1">Voz móvil</label><label><input type="checkbox" id="k2">Voz fija</label>
+            <label><input type="checkbox" id="k3">Datos móviles</label><label><input type="checkbox" id="k4">Datos fijos</label>
+            <label><input type="checkbox" id="k5">Soluciones digitales</label><label><input type="checkbox" id="k6">Otras soluciones</label>
+          </div>
+        </div>
+        <label class="f"><textarea id="q-msg" placeholder=" " rows="3"></textarea><span>Observación adicional</span></label>
+        <label class="check"><input type="checkbox" id="q-legal" required>He leído y acepto las condiciones legales y la política de privacidad</label>
+        <div class="form-foot"><button class="btn btn-primary" type="submit">Enviar solicitud<span class="arr" aria-hidden="true"></span></button><span class="form-msg" role="status"></span></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top:0">
+    <div class="wrap faq-grid">
+      <div class="rv">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Resolvemos <span class="hl">tus dudas</span></h2>
+      </div>
+      <div class="faq rv">
+        <details><summary>¿Qué servicios ofrece Intel Digital para empresas?<span class="plus"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary><p>En Intel Digital ayudamos a empresas y profesionales a encontrar soluciones de telecomunicaciones adaptadas a sus necesidades, con un servicio cercano y personalizado y el respaldo de Orange.</p></details>
+        <details><summary>¿Por qué contratar mis servicios de Orange a través de Intel Digital?<span class="plus"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary><p>Porque tendrás las mismas soluciones de Orange con un asesor especializado que conoce tu negocio y te acompaña antes, durante y después de la contratación.</p></details>
+        <details><summary>¿Intel Digital ofrece sus servicios en toda España?<span class="plus"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary><p>Sí. Contamos con alcance nacional y un equipo de más de 30 asesores especializados en empresas.</p></details>
+        <details><summary>¿Cómo puedo solicitar información o una propuesta?<span class="plus"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary><p>Rellena este formulario o llámanos al +34 916 867 514. Un asesor te contactará para preparar una propuesta sin compromiso.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/app.js"></script>
+<script>
+  const titles = { pyme: 'Pymes', autonomo: 'Autónomo', gran: 'Gran Empresa', digitaliza: 'Digitaliza tu empresa' };
+  document.getElementById('tipoSeg').addEventListener('segchange', e => {
+    document.getElementById('formTitle').textContent = titles[e.detail];
+    document.getElementById('empLabel').textContent = e.detail === 'autonomo' ? 'Actividad' : 'Empresa';
+  });
+  document.querySelector('#tipoSeg input:checked').dispatchEvent(new Event('change'));
+</script>
+</body>
+</html>

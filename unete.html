@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Únete a nosotros · Intel Digital</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="unete">
+<div id="site-header"></div>
+
+<main>
+  <section class="hero phero" style="padding-bottom:clamp(80px,9vw,130px)">
+    <div class="phero-bg" aria-hidden="true"><img src="img/reunion.jpg" alt=""></div>
+    <canvas class="wave" data-density="low" data-horizon=".62" aria-hidden="true"></canvas>
+    <div class="wrap join-grid">
+      <div style="display:grid;gap:24px">
+        <nav class="crumbs" aria-label="Ruta"><a href="./">Inicio</a><span>/</span><span>Únete a nosotros</span></nav>
+        <h1 class="split"><span class="w"><span>Queremos</span></span> <span class="w"><span class="grad" style="animation-delay:.15s">conocerte</span></span></h1>
+        <div class="join-copy">
+          <p class="kicker">ENVÍANOS TU CURRÍCULUM</p>
+          <p>En Intel Digital buscamos personas con iniciativa, ganas de aprender y de seguir creciendo. Personas que quieran formar parte de un equipo cercano, dinámico y con más de 25 años de experiencia en el sector.</p>
+          <p class="callout"><small>Colaboradores autónomos</small>Y si eres consultor autónomo de venta de servicios a Pymes, y quieres dar un impulso a tu negocio, únete a nuestra empresa.</p>
+          <p>Creemos en el talento, las buenas ideas y en construir juntos nuevas oportunidades.</p>
+        </div>
+      </div>
+
+      <form class="form-card" id="joinForm" data-form="Prototipo: en la web real aquí se enviaría tu candidatura." novalidate>
+        <div class="seg" role="radiogroup" aria-label="¿Cómo quieres unirte?" id="roleSeg">
+          <input type="radio" name="perfil" id="r-emp" value="empleado" checked><label for="r-emp">Quiero trabajar en Intel Digital</label>
+          <input type="radio" name="perfil" id="r-auto" value="autonomo"><label for="r-auto">Soy consultor autónomo</label>
+          <span class="pill" aria-hidden="true"></span>
+        </div>
+        <p class="note" id="roleNote">Cuéntanos sobre ti y adjunta tu CV. Te contactaremos si encajas en alguna vacante.</p>
+        <div class="fields">
+          <label class="f"><input id="j-name" placeholder=" " required autocomplete="name"><span>Nombre y apellidos*</span></label>
+          <label class="f"><input id="j-email" type="email" placeholder=" " required autocomplete="email"><span>Email*</span></label>
+          <label class="f"><input id="j-tel" type="tel" placeholder=" " autocomplete="tel"><span>Teléfono</span></label>
+          <label class="f"><input id="j-prov" placeholder=" "><span>Provincia</span></label>
+          <label class="f full" id="puestoWrap"><select id="j-puesto"><option>Asesor autónomos y empresas</option><option>Atención al cliente</option><option>Tienda</option><option>Otro</option></select><span>Puesto de interés</span><svg class="chev" viewBox="0 0 12 12"><path d="m2 4 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></label>
+          <label class="f full" id="carteraWrap" hidden><input id="j-cartera" placeholder=" "><span>Sector o cartera actual de clientes</span></label>
+          <label class="f full"><textarea id="j-msg" placeholder=" " rows="3"></textarea><span>Mensaje</span></label>
+        </div>
+        <div class="file"><input type="file" id="j-cv" accept=".pdf,.doc,.docx"><label for="j-cv">Adjuntar CV</label><span data-file-name>PDF o Word, máx. 5 MB</span></div>
+        <label class="check"><input type="checkbox" id="j-legal" required>He leído y acepto las condiciones legales y la política de privacidad</label>
+        <div class="form-foot"><button class="btn btn-primary" type="submit">Enviar<span class="arr" aria-hidden="true"></span></button><span class="form-msg" role="status"></span></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/app.js"></script>
+<script>
+  document.getElementById('roleSeg').addEventListener('segchange', e => {
+    const auto = e.detail === 'autonomo';
+    document.getElementById('roleNote').textContent = auto
+      ? 'Da un impulso a tu negocio vendiendo servicios Orange a Pymes con el respaldo de Intel Digital.'
+      : 'Cuéntanos sobre ti y adjunta tu CV. Te contactaremos si encajas en alguna vacante.';
+    document.getElementById('puestoWrap').hidden = auto;
+    document.getElementById('carteraWrap').hidden = !auto;
+  });
+  document.querySelector('.seg input:checked').dispatchEvent(new Event('change'));
+</script>
+</body>
+</html>
