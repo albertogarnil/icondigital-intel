@@ -23,9 +23,9 @@
 
   const PAGES = [
     { id: 'nosotros',     href: 'nosotros.html',     label: 'Nosotros' },
-    { id: 'productos',    href: 'productos.html',    label: 'Productos y Tarifas' },
-    { id: 'fidelizacion', href: 'fidelizacion.html', label: 'Fidelización' },
-    { id: 'unete',        href: 'unete.html',        label: 'Únete a nosotros' },
+    { id: 'soluciones',   href: 'soluciones.html',    label: 'Soluciones para Empresas' },
+    { id: 'acompanamiento', href: 'acompanamiento.html', label: 'Acompañamiento' },
+    { id: 'unete',        href: 'unete.html',        label: 'Únete al equipo' },
   ];
   const HOME = document.body.dataset.home || './';
   const ICON = {
@@ -43,14 +43,14 @@
     header.outerHTML = `
     <header class="site-nav" id="nav">
       <div class="nav-row">
-        <a class="brand" href="${HOME}" aria-label="Intel Digital, inicio"><img src="img/logo-blanco.png" alt="Intel Digital Comunicaciones" width="306" height="75"></a>
+        <a class="brand" href="${HOME}" aria-label="Intel Digital, volver al inicio" title="Volver al inicio"><img src="img/logo-blanco.png" alt="Intel Digital Comunicaciones" width="306" height="75"><span class="brand-tip" aria-hidden="true">Inicio</span></a>
         <ul class="nav-track" id="navTrack">
           <li class="nav-ind" id="navInd" aria-hidden="true"></li>
           ${PAGES.map(p => `<li><a href="${p.href}"${p.id === page ? ' class="is-active" aria-current="page"' : ''}>${p.label}</a></li>`).join('')}
         </ul>
         <div class="nav-side">
           <span class="nav-phone">${bars}+34 916 867 514</span>
-          <a class="btn btn-primary btn-sm" href="contacto.html">${label('Contacto')}<span class="arr" aria-hidden="true"></span></a>
+          <a class="btn btn-primary btn-sm${page === 'contacto' ? ' is-active' : ''}" href="contacto.html"${page === 'contacto' ? ' aria-current="page"' : ''}>${label('Contacto')}<span class="arr" aria-hidden="true"></span></a>
           <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="overlay"><span></span></button>
         </div>
       </div>
@@ -93,11 +93,11 @@
         <div class="foot-col">
           <h4>Soluciones</h4>
           <ul>
-            <li><a href="productos.html#pymes">Pymes</a></li>
-            <li><a href="productos.html#autonomos">Autónomos</a></li>
-            <li><a href="productos.html#gran-empresa">Gran empresa</a></li>
-            <li><a href="productos.html#digitaliza">Digitaliza tu empresa</a></li>
-            <li><a href="productos.html#servicios">Servicios</a></li>
+            <li><a href="soluciones.html#pymes">Pymes</a></li>
+            <li><a href="soluciones.html#autonomos">Autónomos</a></li>
+            <li><a href="soluciones.html#gran-empresa">Gran empresa</a></li>
+            <li><a href="soluciones.html#digitaliza">Digitaliza tu empresa</a></li>
+            <li><a href="soluciones.html#servicios">Servicios</a></li>
           </ul>
         </div>
         <div class="foot-col">

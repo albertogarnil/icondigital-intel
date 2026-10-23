@@ -523,3 +523,40 @@ body.is-leaving main,body.is-leaving .site-foot{opacity:0;transition:opacity .2s
 .f-label{font-size:.85rem;color:var(--muted);margin-top:14px}
 @media (max-width:900px){.ph-row,.listen{grid-template-columns:1fr}}
 @media (max-width:600px){.checks{grid-template-columns:1fr}}
+
+/* ---------- v1.3: logo that invites a click + clear current-page state ---------- */
+.brand{position:relative;display:flex;align-items:center;gap:10px;transition:transform .45s var(--ease)}
+.brand img{transition:height .4s var(--ease),filter .4s}
+/* periodic light sweep clipped to the logo's shape */
+.brand::after{content:"";position:absolute;left:0;top:0;width:var(--logo-w,163px);height:100%;pointer-events:none;
+  background:linear-gradient(110deg,transparent 30%,rgba(255,215,31,.95) 48%,rgba(255,255,255,.9) 52%,transparent 70%) no-repeat;background-size:250% 100%;background-position:150% 0;
+  -webkit-mask:url("../img/logo-blanco.png") left center/contain no-repeat;mask:url("../img/logo-blanco.png") left center/contain no-repeat;
+  animation:logo-sweep 7s var(--ease) 1.2s infinite}
+@keyframes logo-sweep{0%,72%{background-position:150% 0}100%{background-position:-60% 0}}
+.brand:hover,.brand:focus-visible{transform:translateY(-1px)}
+.brand:hover img,.brand:focus-visible img{filter:drop-shadow(0 0 10px rgba(247,147,30,.75))}
+.brand:hover::after,.brand:focus-visible::after{animation-duration:1.4s;animation-delay:0s}
+.brand-tip{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;padding:4px 8px;border-radius:999px;background:rgba(232,75,21,.9);
+  opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .4s var(--ease);white-space:nowrap}
+.brand-tip::before{content:"← "}
+.brand:hover .brand-tip,.brand:focus-visible .brand-tip{opacity:1;transform:none}
+.site-nav.is-scrolled .brand{--logo-w:139px}
+/* current page: solid orange pill instead of a faint dot */
+.nav-track a.is-active{color:#fff;background:linear-gradient(100deg,var(--orange),#f26a1b);box-shadow:0 6px 18px -8px rgba(232,75,21,.9)}
+.nav-track a.is-active::after{display:none}
+.nav-track a.is-active:hover{color:#fff}
+.nav-side .btn.is-active{box-shadow:0 0 0 2px #fff,0 0 0 5px rgba(232,75,21,.55)}
+.overlay a.is-active{color:var(--orange-hi)}
+.overlay a.is-active::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--orange);align-self:center;margin-right:-2px}
+@media (prefers-reduced-motion:reduce){.brand::after{display:none}}
+@media (max-width:1080px){.brand-tip{display:none}}
+
+/* Nosotros: experience statement */
+.statement{display:grid;gap:22px;border-top:1px solid var(--line);padding-top:clamp(40px,5vw,64px)}
+.statement-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,5vw,80px);align-items:end}
+.statement h2{font-size:clamp(2rem,1.3rem + 2.6vw,3.6rem);letter-spacing:-.04em;line-height:1.02}
+@media (max-width:900px){.statement-grid{grid-template-columns:1fr}}
+
+/* Acompañamiento: pillar subtitle */
+.tc-sub{font-family:var(--f-display);font-weight:600;font-size:var(--s-md);color:var(--orange);letter-spacing:-.01em;line-height:1.25}
+.tcard.is-light .tc-body p{line-height:1.65}
