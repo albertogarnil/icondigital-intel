@@ -43,7 +43,7 @@
     header.outerHTML = `
     <header class="site-nav" id="nav">
       <div class="nav-row">
-        <a class="brand" href="${HOME}" aria-label="Intel Digital, volver al inicio" title="Volver al inicio"><img src="img/logo-blanco.png" alt="Intel Digital Comunicaciones" width="306" height="75"><span class="brand-tip" aria-hidden="true">Inicio</span></a>
+        <a class="brand" href="${HOME}" aria-label="Intel Digital, volver al inicio"><img src="img/logo-blanco.png" alt="Intel Digital Comunicaciones" width="306" height="75"></a>
         <ul class="nav-track" id="navTrack">
           <li class="nav-ind" id="navInd" aria-hidden="true"></li>
           ${PAGES.map(p => `<li><a href="${p.href}"${p.id === page ? ' class="is-active" aria-current="page"' : ''}>${p.label}</a></li>`).join('')}
