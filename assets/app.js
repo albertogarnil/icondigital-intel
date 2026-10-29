@@ -62,7 +62,7 @@
         ${PAGES.map(p => `<li><a href="${p.href}"${p.id === page ? ' class="is-active"' : ''}>${p.label} <small>/${p.id}</small></a></li>`).join('')}
         <li><a href="contacto.html"${page === 'contacto' ? ' class="is-active"' : ''}>Contacto <small>/contacto</small></a></li>
       </ul>
-      <div class="ov-foot"><span>+34 916 867 514</span><span>info@empresa.com</span><span>Distribuidor Oficial Orange</span></div>
+      <div class="ov-foot"><span>+34 916 867 514</span><span>info@inteldigital.com</span><span>Distribuidor Oficial Orange</span></div>
     </div>`;
   }
 
@@ -103,7 +103,7 @@
         <div class="foot-col">
           <h4>Contacto</h4>
           <div class="contact-line">${ICON.phone}+34 916 867 514</div>
-          <div class="contact-line">${ICON.mail}info@empresa.com</div>
+          <div class="contact-line">${ICON.mail}info@inteldigital.com</div>
           <a class="btn btn-ghost btn-sm" href="unete.html" style="margin-top:6px">${label('Envía tu CV')}</a>
           <div class="socials">
             <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.2l-4.9-6.3L5.4 21H2.3l7.2-8.2L1.8 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.5z"/></svg></a>

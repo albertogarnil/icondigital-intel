@@ -1,0 +1,12 @@
+{
+  "name": "icondigital-intel",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Prototipo web Intel Digital por Icon Digital",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
